@@ -52,7 +52,7 @@ const TabNavigator = createBottomTabNavigator(
 				tabBarIcon: ({ tintColor }) => (
 					<Image
 						source={require('./assets/airbnb.png')}
-						style={{ width: 20, height: 20, tintColor: tintColor }}
+						style={{ width: 22, height: 22, tintColor: tintColor }}
 					/>
 					//<Icon name="ios-heart-empty" color={tintColor} size={24} />
 				)
@@ -77,7 +77,15 @@ const TabNavigator = createBottomTabNavigator(
 		tabBarOptions: {
 			activeTintColor: 'tomato',
 			inactiveTintColor: 'gray',
-		  },
+			style: {
+				backgroundColor: 'white',
+				borderTopWidth: 0,
+				shadowOffset: { width: 3, height: 3 },
+				shadowColor: 'black',
+				shadowOpacity: 0.4,
+				elevation: 5
+			}
+		}
 	}
 );
 
