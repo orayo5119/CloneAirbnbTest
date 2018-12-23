@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { 
+	StyleSheet,
+	Text, 
+	View, 
+	Image,
+	SafeAreaView, 
+} from 'react-native';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 //import Icon from '@expo/vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/Feather';
@@ -10,15 +16,15 @@ import Inbox from './screens/Inbox';
 import Trips from './screens/Trips';
 import Profile from './screens/Profile';
 
-class App extends React.Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Text>YUProfile! Profile up App.js to start working on your app!</Text>
-			</View>
-		);
-	}
-}
+//class App extends React.Component {
+//	render() {
+//		return (
+//			<View style={styles.container}>
+//				<Text>YUProfile! Profile up App.js to start working on your app!</Text>
+//			</View>
+//		);
+//	}
+//}
 
 const styles = StyleSheet.create({
 	container: {

@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
+  "devToolsPort": 19003,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 38427,
-  "expoServerNgrokUrl": "https://qh-9v2.ray0.cloneairbnbtest.exp.direct",
-  "packagerNgrokUrl": "https://packager.qh-9v2.ray0.cloneairbnbtest.exp.direct",
-  "ngrokPid": 38450
+  "packagerPort": 19004,
+  "packagerPid": 40337,
+  "expoServerNgrokUrl": "https://qh-9v2.anonymous.cloneairbnbtest.exp.direct",
+  "packagerNgrokUrl": "https://packager.qh-9v2.anonymous.cloneairbnbtest.exp.direct",
+  "ngrokPid": 40361
 }
