@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, TextInput, Platform, StatusBar, ScrollView, Image } from 'react-native';
+import { Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import Category from "./components/Explore/Category";
 
 class Explore extends Component {
 	// For android Top navigation 上方位置的修正
@@ -59,21 +60,25 @@ class Explore extends Component {
               <Text style={{fontSize:24, fontWeight:"700", paddingHorizontal:20}}>
                 What can we help you find?
               </Text>
-              <View style={{ height:130, marginTop:20}}>
-                <ScrollView>
-                  {/* small image box options */}
-                  <View style={{height:130, width:130, marginLeft:20, borderWidth:0.5, borderColor:"#dddddd"}}>
-                    <View style={{flex:2}}>
-                      <Image source={require('../assets/home.jpg')}
-                      style={{flex:1,width:null,height:null, resizeMode:"cover"}}
-                      />
-                    </View>
-                    <View style={{flex:1}}>
-                      <Text style={{paddingLeft:10, paddingTop:10}}>
-                        Home
-                      </Text>
-                    </View>
-                  </View>
+              <View style={{ height:150, marginTop:20}}>
+                <ScrollView horizontal={true} >
+                  <Category imageUri={require('../assets/home.jpg')}
+                  name = "Home"/>
+
+                  <Category imageUri={require('../assets/restaurant.jpg')}
+                  name = "Restaurent"/>
+
+                  <Category imageUri={require('../assets/experiences.jpg')}
+                  name = "Experience"/>
+
+									<Category imageUri={require('../assets/home.jpg')}
+                  name = "Home"/>
+
+                  <Category imageUri={require('../assets/restaurant.jpg')}
+                  name = "Restaurent"/>
+
+                  <Category imageUri={require('../assets/experiences.jpg')}
+                  name = "Experience"/>
                 </ScrollView>
               </View>
             </View>
