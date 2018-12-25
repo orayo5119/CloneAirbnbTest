@@ -6,7 +6,7 @@ import Category from "./components/Explore/Category";
 class Explore extends Component {
 	// For android Top navigation 上方位置的修正
 	componentWillMount() {
-		this.startHeaderHeight = 65;
+		this.startHeaderHeight = 80;
 		if (Platform.OS == 'android') {
 			this.startHeaderHeight = 70 + StatusBar.currentHeight;
 		}
@@ -26,6 +26,7 @@ class Explore extends Component {
 							borderBottomColor: '#B7B7B7'
 						}}
 					>
+					{/* search bar */}
 						<View
 							style={{
 								flexDirection: 'row',
@@ -37,8 +38,8 @@ class Explore extends Component {
 								shadowOpacity: 0.2,
 								// (Android-only) This adds a drop shadow to the item and affects z-order for overlapping views. Only supported on Android 5.0+ above
 								elevation: 2,
-								// if device is android, marginTop + 30
-								marginTop: Platform.OS == 'android' ? 30 : null
+								// if device is android, marginTop + 30, if is ios + 15
+								marginTop: Platform.OS == 'android' ? 30 : 15
 							}}
 						>
 							<Icon name="search" style={{ marginRight: 7 }} size={20} />
@@ -54,7 +55,7 @@ class Explore extends Component {
 							/>
 						</View>
 					</View>
-
+					{/* main content */}
           <ScrollView scrollEventThrottle={16}>
             <View style={{flex:1, backgroundColor:"white", paddingTop:20 }}>
               <Text style={{fontSize:24, fontWeight:"700", paddingHorizontal:20}}>
@@ -83,6 +84,12 @@ class Explore extends Component {
                   <Category imageUri={require('../assets/experiences.jpg')}
                   name = "Experience"/>
                 </ScrollView>
+
+								<View>
+									<Text>
+										Introducing Airbnb Plus
+									</Text>
+								</View>
               </View>
             </View>
           </ScrollView>
