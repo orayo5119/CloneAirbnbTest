@@ -61,7 +61,10 @@ class Explore extends Component {
                 What can we help you find?
               </Text>
               <View style={{ height:150, marginTop:20}}>
-                <ScrollView horizontal={true} >
+                <ScrollView horizontal={true} 
+									// if don't want to show horizontal scroll bar
+									showsHorizontalScrollIndicator={false}
+								>
                   <Category imageUri={require('../assets/home.jpg')}
                   name = "Home"/>
 
