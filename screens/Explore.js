@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View, Dimensions, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Category from "./components/Explore/Category";
+
+// 根據手機螢幕調整尺寸
+const { height, width } = Dimensions.get("window")
+
+
 
 class Explore extends Component {
 	// For android Top navigation 上方位置的修正
@@ -61,7 +66,8 @@ class Explore extends Component {
               <Text style={{fontSize:24, fontWeight:"700", paddingHorizontal:20}}>
                 What can we help you find?
               </Text>
-              <View style={{ height:150, marginTop:20}}>
+							{/* Scroll view area height */}
+              <View style={{flex:1, height:200, marginTop:20}}>
                 <ScrollView horizontal={true} 
 									// if don't want to show horizontal scroll bar
 									showsHorizontalScrollIndicator={false}
@@ -85,11 +91,35 @@ class Explore extends Component {
                   name = "Experience"/>
                 </ScrollView>
 
-								<View>
-									<Text>
+								<View style={{flex:2, paddingHorizontal:20}}>
+									<Text style={{fontSize:24, fontWeight:'700'}}> 
 										Introducing Airbnb Plus
 									</Text>
+									<View style={{flexDirection:'row', width: Dimensions.get('window').width}}>
+										<Text style={{marginTop:10, fontWeight:'100',flex:1, flexWrap: 'wrap'}}> 
+											A new selection of homes verified for quality and comfort
+										</Text>
+									</View>
+									
+									<View style={{ width: width - 40, height: 200, marginTop:20}}>
+										<Image
+											style = {{flex:1, height:null, width:null, resizeMode:"cover",
+												borderRadius: 5, borderWidth:1, borderColor:"#dddddd"}}
+											source = { require ('../assets/home.jpg')}
+										/>
+									</View>
+
+									<View style={{ width: width - 40, height: 200, marginTop:20}}>
+										<Image
+											style = {{flex:1, height:null, width:null, resizeMode:"cover",
+												borderRadius: 5, borderWidth:1, borderColor:"#dddddd"}}
+											source = { require ('../assets/home.jpg')}
+										/>
+									</View>
+									
 								</View>
+
+								
               </View>
             </View>
           </ScrollView>
