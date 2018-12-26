@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import { Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View, Dimensions, Image } from 'react-native';
+import {
+	Platform,
+	SafeAreaView,
+	ScrollView,
+	StatusBar,
+	StyleSheet,
+	Text,
+	TextInput,
+	View,
+	Dimensions,
+	Image
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import Category from "./components/Explore/Category";
+import Category from './components/Explore/Category';
 
 // 根據手機螢幕調整尺寸
-const { height, width } = Dimensions.get("window")
-
-
+const { height, width } = Dimensions.get('window');
 
 class Explore extends Component {
 	// For android Top navigation 上方位置的修正
@@ -31,7 +40,7 @@ class Explore extends Component {
 							borderBottomColor: '#B7B7B7'
 						}}
 					>
-					{/* search bar */}
+						{/* search bar */}
 						<View
 							style={{
 								flexDirection: 'row',
@@ -49,6 +58,7 @@ class Explore extends Component {
 						>
 							<Icon name="search" style={{ marginRight: 7 }} size={20} />
 							<TextInput
+								underlineColorAndroid="transparent"
 								placeholder="Search places"
 								placeholderTextColor="#B7B7B7"
 								// Size="30"
@@ -61,68 +71,55 @@ class Explore extends Component {
 						</View>
 					</View>
 					{/* main content */}
-          <ScrollView scrollEventThrottle={16}>
-            <View style={{flex:1, backgroundColor:"white", paddingTop:20 }}>
-              <Text style={{fontSize:24, fontWeight:"700", paddingHorizontal:20}}>
-                What can we help you find?
-              </Text>
+					<ScrollView scrollEventThrottle={16}>
+						<View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
+							<Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
+								What can we help you find?
+							</Text>
 							{/* Scroll view area height */}
-              <View style={{flex:1, height:200, marginTop:20}}>
-                <ScrollView horizontal={true} 
+							<View style={{ height: 160, marginTop: 20 }}>
+								<ScrollView
+									horizontal={true}
 									// if don't want to show horizontal scroll bar
 									showsHorizontalScrollIndicator={false}
 								>
-                  <Category imageUri={require('../assets/home.jpg')}
-                  name = "Home"/>
+									<Category imageUri={require('../assets/home.jpg')} name="Home" />
 
-                  <Category imageUri={require('../assets/restaurant.jpg')}
-                  name = "Restaurent"/>
+									<Category imageUri={require('../assets/restaurant.jpg')} name="Restaurent" />
 
-                  <Category imageUri={require('../assets/experiences.jpg')}
-                  name = "Experience"/>
+									<Category imageUri={require('../assets/experiences.jpg')} name="Experience" />
 
-									<Category imageUri={require('../assets/home.jpg')}
-                  name = "Home"/>
+									<Category imageUri={require('../assets/home.jpg')} name="Home" />
 
-                  <Category imageUri={require('../assets/restaurant.jpg')}
-                  name = "Restaurent"/>
+									<Category imageUri={require('../assets/restaurant.jpg')} name="Restaurent" />
 
-                  <Category imageUri={require('../assets/experiences.jpg')}
-                  name = "Experience"/>
-                </ScrollView>
+									<Category imageUri={require('../assets/experiences.jpg')} name="Experience" />
+								</ScrollView>
+							</View>
+							<View style={{ paddingHorizontal: 20 }}>
+								<Text style={{ fontSize: 24, fontWeight: '700' }}>Introducing Airbnb Plus</Text>
 
-								<View style={{flex:2, paddingHorizontal:20}}>
-									<Text style={{fontSize:24, fontWeight:'700'}}> 
-										Introducing Airbnb Plus
-									</Text>
-									<View style={{flexDirection:'row', width: Dimensions.get('window').width}}>
-										<Text style={{marginTop:10, fontWeight:'100',flex:1, flexWrap: 'wrap'}}> 
-											A new selection of homes verified for quality and comfort
-										</Text>
-									</View>
-									
-									<View style={{ width: width - 40, height: 200, marginTop:20}}>
-										<Image
-											style = {{flex:1, height:null, width:null, resizeMode:"cover",
-												borderRadius: 5, borderWidth:1, borderColor:"#dddddd"}}
-											source = { require ('../assets/home.jpg')}
-										/>
-									</View>
+								<Text style={{ marginTop: 10, fontWeight: '100' }}>
+									A new selection of homes verified for quality and comfort
+								</Text>
 
-									<View style={{ width: width - 40, height: 200, marginTop:20}}>
-										<Image
-											style = {{flex:1, height:null, width:null, resizeMode:"cover",
-												borderRadius: 5, borderWidth:1, borderColor:"#dddddd"}}
-											source = { require ('../assets/home.jpg')}
-										/>
-									</View>
-									
+								<View style={{ width: width - 40, height: 200, marginTop: 20 }}>
+									<Image
+										style={{
+											flex: 1,
+											height: null,
+											width: null,
+											resizeMode: 'cover',
+											borderRadius: 5,
+											borderWidth: 1,
+											borderColor: '#dddddd'
+										}}
+										source={require('../assets/home.jpg')}
+									/>
 								</View>
-
-								
-              </View>
-            </View>
-          </ScrollView>
+							</View>
+						</View>
+					</ScrollView>
 				</View>
 			</SafeAreaView>
 		);
