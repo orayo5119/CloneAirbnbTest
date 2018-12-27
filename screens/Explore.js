@@ -125,10 +125,30 @@ class Explore extends Component {
 								Homes around the world!
 							</Text>
 							<View style={{ paddingHorizontal:20, marginTop:20, flexDirection:"row", flexWrap:"wrap", justifyContent:"space-between"}}>
-								<Home width={width}/>
-								<Home width={width}/>
-								<Home width={width}/>
-
+								<Home width={width}
+									name="The Cozy Place"
+									type="PRIVATE ROOM 2 BEDS"
+									price={82}
+									rating={4}
+								/>
+								<Home width={width}
+									name="The Cozy Place"
+									type="PRIVATE ROOM 2 BEDS"
+									price={82}
+									rating={4}
+								/>
+								<Home width={width}
+									name="The Cozy Place"
+									type="PRIVATE ROOM 2 BEDS"
+									price={82}
+									rating={4}
+								/>
+								<Home width={width}
+									name="The Cozy Place"
+									type="PRIVATE ROOM 2 BEDS"
+									price={82}
+									rating={4}
+								/>
 							</View>
 						</View>
 					</ScrollView>

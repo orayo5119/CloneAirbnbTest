@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet,Image } from 'react-native';
-
+import StarRating from "react-native-star-rating";
 
 class Home extends Component {
     render (){
@@ -12,9 +12,15 @@ class Home extends Component {
             source={require('../../../assets/home.jpg')}/>
         </View>
         <View style={{flex: 0.8, alignItems:"flex-start", justifyContent:"space-evenly", paddingLeft: 10}}>
-            <Text style={{ fontSize:14, fontWeight:"bold", color:"#b63838"}}>Private 2 beds</Text>
-            <Text style={{ fontSize:14, fontWeight:"bold"}}>The cozy place</Text>
-            <Text style={{ fontSize:14}}> $ 80 usd</Text>
+            <Text style={{ fontSize:10, fontWeight:"bold", color:"#b63838"}}>{this.props.type}</Text>
+            <Text style={{ fontSize:14, fontWeight:"bold"}}>{this.props.name}</Text>
+            <Text style={{ fontSize:10}}> $ {this.props.price}</Text>
+            <StarRating
+              disable={true}
+              maxStars={5}
+              rating={this.props.rating}
+              starSize={10}
+            />
         </View>
     </View>
       );
