@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Category from './components/Explore/Category';
+import Home from './components/Explore/Home';
 
 // 根據手機螢幕調整尺寸
 const { height, width } = Dimensions.get('window');
@@ -96,7 +97,7 @@ class Explore extends Component {
 									<Category imageUri={require('../assets/experiences.jpg')} name="Experience" />
 								</ScrollView>
 							</View>
-							<View style={{ paddingHorizontal: 20 }}>
+							<View style={{ marginTop:10,paddingHorizontal: 20 }}>
 								<Text style={{ fontSize: 24, fontWeight: '700' }}>Introducing Airbnb Plus</Text>
 
 								<Text style={{ marginTop: 10, fontWeight: '100' }}>
@@ -117,6 +118,17 @@ class Explore extends Component {
 										source={require('../assets/home.jpg')}
 									/>
 								</View>
+							</View>
+						</View>
+						<View style={{marginTop:20}}>
+							<Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
+								Homes around the world!
+							</Text>
+							<View style={{ paddingHorizontal:20, marginTop:20, flexDirection:"row", flexWrap:"wrap", justifyContent:"space-between"}}>
+								<Home width={width}/>
+								<Home width={width}/>
+								<Home width={width}/>
+
 							</View>
 						</View>
 					</ScrollView>

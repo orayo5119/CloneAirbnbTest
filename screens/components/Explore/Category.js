@@ -5,7 +5,7 @@ import { Text, View, StyleSheet,Image } from 'react-native';
 class Category extends Component {
     render (){
       return (
-             <View style = {{height: 150, width: 130, marginLeft: 15, borderWidth: 0.5, borderColor: "grey" , borderRadius: 5}}>
+             <View style = {{height: 150, width: 130, marginLeft: 20, borderWidth: 0.5, borderColor: "grey" , borderRadius: 5}}>
                 <View style={{flex:2}}>
                     <Image source={this.props.imageUri}
                     style={{flex:1, width:null, height:null, resizeMode:"cover"}}
